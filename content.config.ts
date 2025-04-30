@@ -6,7 +6,7 @@ export default defineContentConfig({
       type: "page",
       source: {
         include: "en/**/*.md",
-        exclude: ["en/experience/*.md", "en/education/*.md"],
+        exclude: ["en/experience/*.md"],
         prefix: "/",
       },
       schema: contentSchema(),
@@ -16,18 +16,18 @@ export default defineContentConfig({
       type: "data",
       source: {
         include: "en/experience/*.md",
-        prefix: "/",
+        prefix: "/experience",
       },
       schema: experienceSchema(),
     }),
 
-    education_en: defineCollection({
+    education: defineCollection({
       type: "data",
       source: {
-        include: "en/education/*.json",
-        prefix: "/",
+        include: "education/*.yml",
+        prefix: "/education",
       },
-      schema: experienceSchema(),
+      schema: educationSchema(),
     }),
   },
 });
@@ -46,5 +46,14 @@ function experienceSchema() {
     from: z.date(),
     to: z.date().or(z.literal("present")),
     location: z.string(),
+  });
+}
+
+function educationSchema() {
+  return z.object({
+    title: z.string(),
+    institution: z.string(),
+    from: z.number(),
+    to: z.number(),
   });
 }

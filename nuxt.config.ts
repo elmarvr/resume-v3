@@ -39,4 +39,7 @@ export default defineNuxtConfig({
       optimizeTranslationDirective: false,
     },
   },
+  icon: {
+    mode: "svg",
+  },
 });
