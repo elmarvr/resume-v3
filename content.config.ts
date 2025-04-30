@@ -6,7 +6,7 @@ export default defineContentConfig({
       type: "page",
       source: {
         include: "en/**/*.md",
-        exclude: [],
+        exclude: ["en/experience/*.md", "en/education/*.md"],
         prefix: "/",
       },
       schema: contentSchema(),
@@ -15,7 +15,16 @@ export default defineContentConfig({
     experience_en: defineCollection({
       type: "data",
       source: {
-        include: "en/experience/**/*.md",
+        include: "en/experience/*.md",
+        prefix: "/",
+      },
+      schema: experienceSchema(),
+    }),
+
+    education_en: defineCollection({
+      type: "data",
+      source: {
+        include: "en/education/*.json",
         prefix: "/",
       },
       schema: experienceSchema(),
