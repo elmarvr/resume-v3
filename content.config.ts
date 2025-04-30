@@ -2,16 +2,6 @@ import { defineCollection, defineContentConfig, z } from "@nuxt/content";
 
 export default defineContentConfig({
   collections: {
-    content_en: defineCollection({
-      type: "page",
-      source: {
-        include: "en/**/*.md",
-        exclude: ["en/experience/*.md"],
-        prefix: "/",
-      },
-      schema: contentSchema(),
-    }),
-
     experience_en: defineCollection({
       type: "data",
       source: {
@@ -29,14 +19,17 @@ export default defineContentConfig({
       },
       schema: educationSchema(),
     }),
+
+    skills_en: defineCollection({
+      type: "data",
+      source: {
+        include: "en/skills.yml",
+        prefix: "/skills",
+      },
+      schema: skillsSchema(),
+    }),
   },
 });
-
-function contentSchema() {
-  return z.object({
-    title: z.string(),
-  });
-}
 
 function experienceSchema() {
   return z.object({
@@ -55,5 +48,11 @@ function educationSchema() {
     institution: z.string(),
     from: z.number(),
     to: z.number(),
+  });
+}
+
+function skillsSchema() {
+  return z.object({
+    skills: z.string().array(),
   });
 }

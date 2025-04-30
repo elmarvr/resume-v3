@@ -3,6 +3,7 @@
     <div>
       <Education />
       <Courses />
+      <Skills />
     </div>
 
     <div class="col-span-2">
