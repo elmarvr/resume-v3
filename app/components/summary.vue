@@ -1,6 +1,9 @@
 <script setup lang="ts">
+const { locale } = useI18n();
 const { data: summary } = await useAsyncData(async () => {
-  return queryCollection("content_en").where("stem", "=", "summary").first();
+  return queryCollection(`content_${locale.value}`)
+    .where("stem", "=", "summary")
+    .first();
 });
 </script>
 

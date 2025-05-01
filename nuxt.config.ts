@@ -35,6 +35,7 @@ export default defineNuxtConfig({
       },
     ],
     defaultLocale: "en",
+    strategy: "prefix",
     bundle: {
       optimizeTranslationDirective: false,
     },

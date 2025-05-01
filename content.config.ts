@@ -9,9 +9,16 @@ export default defineContentConfig({
         prefix: "/",
         exclude: ["en/experience/*.md"],
       },
-      schema: z.object({
-        body: z.any(),
-      }),
+      schema: contentSchema(),
+    }),
+    content_nl: defineCollection({
+      type: "data",
+      source: {
+        include: "nl/**/*.md",
+        prefix: "/",
+        exclude: ["nl/experience/*.md"],
+      },
+      schema: contentSchema(),
     }),
 
     experience_en: defineCollection({
@@ -22,14 +29,13 @@ export default defineContentConfig({
       },
       schema: experienceSchema(),
     }),
-
-    education: defineCollection({
+    experience_nl: defineCollection({
       type: "data",
       source: {
-        include: "education/*.yml",
-        prefix: "/education",
+        include: "nl/experience/*.md",
+        prefix: "/experience",
       },
-      schema: educationSchema(),
+      schema: experienceSchema(),
     }),
 
     skills_en: defineCollection({
@@ -40,8 +46,48 @@ export default defineContentConfig({
       },
       schema: skillsSchema(),
     }),
+    skills_nl: defineCollection({
+      type: "data",
+      source: {
+        include: "nl/skills.yml",
+        prefix: "/skills",
+      },
+      schema: skillsSchema(),
+    }),
+
+    education: defineCollection({
+      type: "data",
+      source: {
+        include: "education/*.yml",
+        prefix: "/education",
+      },
+      schema: z.object({
+        title: z.string(),
+        institution: z.string(),
+        from: z.number(),
+        to: z.number(),
+      }),
+    }),
+
+    courses: defineCollection({
+      type: "data",
+      source: {
+        include: "courses/*.yml",
+        prefix: "/courses",
+      },
+      schema: z.object({
+        title: z.string(),
+        url: z.string(),
+      }),
+    }),
   },
 });
+
+function contentSchema() {
+  return z.object({
+    body: z.any(),
+  });
+}
 
 function experienceSchema() {
   return z.object({
@@ -51,15 +97,6 @@ function experienceSchema() {
     from: z.date(),
     to: z.date().or(z.literal("present")),
     location: z.string(),
-  });
-}
-
-function educationSchema() {
-  return z.object({
-    title: z.string(),
-    institution: z.string(),
-    from: z.number(),
-    to: z.number(),
   });
 }
 

@@ -1,8 +1,10 @@
 <script setup lang="ts">
-const { d, t } = useI18n();
+const { d, t, locale } = useI18n();
 
 const { data: experience } = await useAsyncData(async () => {
-  return queryCollection("experience_en").order("from", "DESC").all();
+  return queryCollection(`experience_${locale.value}`)
+    .order("from", "DESC")
+    .all();
 });
 
 function format(date: Date | "present") {
@@ -23,7 +25,7 @@ function format(date: Date | "present") {
       {{ $t("experience") }}
     </SectionTitle>
     <ul class="space-y-8">
-      <li v-for="item in experience" :key="item.id" class="break-inside-avoid">
+      <li v-for="item in experience" :key="item.id">
         <h3 class="text-base font-medium">{{ item.title }}</h3>
         <p>{{ item.company }}</p>
         <div class="flex pb-4">

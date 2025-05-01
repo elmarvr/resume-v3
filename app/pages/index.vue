@@ -6,7 +6,7 @@ const app = useAppConfig();
   <div class="pb-8">
     <div class="flex justify-between pb-4">
       <div>
-        <h1 class="text-xl font-bold">
+        <h1 class="text-2xl font-bold">
           {{ app.profile.name }}
         </h1>
         <p>

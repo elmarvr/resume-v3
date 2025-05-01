@@ -1,6 +1,7 @@
 <script setup lang="ts">
+const { locale } = useI18n();
 const { data: skills } = await useAsyncData(async () => {
-  return queryCollection("skills_en")
+  return queryCollection(`skills_${locale.value}`)
     .first()
     .then((data) => data?.skills);
 });
@@ -11,7 +12,7 @@ const { data: skills } = await useAsyncData(async () => {
     <SectionTitle>
       {{ $t("skills") }}
     </SectionTitle>
-    <ul>
+    <ul class="space-y-2">
       <li v-for="item in skills" :key="item">
         {{ item }}
       </li>

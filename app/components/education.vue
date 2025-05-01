@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: education } = await useAsyncData(async () => {
-  return queryCollection("education").all();
+  return queryCollection("education").order("from", "DESC").all();
 });
 </script>
 
