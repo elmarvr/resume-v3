@@ -4,9 +4,9 @@ const app = useAppConfig();
 
 <template>
   <div>
-    <h2 class="text-2xl">
+    <SectionTitle>
       {{ $t("courses") }}
-    </h2>
+    </SectionTitle>
     <ul>
       <li v-for="item in app.courses" :key="item.href">
         <a

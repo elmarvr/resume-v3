@@ -1,9 +1,9 @@
 ---
-title: Web Developer
-company: Rain Interactive
-from: 2025-03-01
-to: present
-location: Remote
+title: Senior Front-End Developer
+company: Creed Media @ ACOS
+from: 2023-05-01
+to: 2023-09-01
+location: Abu Dhabi, UAE
 ---
 
 lorem ipsum dolor sit amet, consectetur adipiscing elit.

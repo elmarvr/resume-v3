@@ -1,9 +1,9 @@
 ---
-title: Web Developer
-company: Rain Interactive
-from: 2025-03-01
-to: present
-location: Remote
+title: Junior full-stack developer
+company: Loyally
+from: 2019-01-01
+to: 2020-02-01
+location: Tilburg, Netherlands
 ---
 
 lorem ipsum dolor sit amet, consectetur adipiscing elit.

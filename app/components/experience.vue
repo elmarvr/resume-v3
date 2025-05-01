@@ -2,7 +2,7 @@
 const { d, t } = useI18n();
 
 const { data: experience } = await useAsyncData(async () => {
-  return queryCollection("experience_en").all();
+  return queryCollection("experience_en").order("from", "DESC").all();
 });
 
 function format(date: Date | "present") {
@@ -19,24 +19,24 @@ function format(date: Date | "present") {
 
 <template>
   <div>
-    <h2 class="text-2xl">
+    <SectionTitle>
       {{ $t("experience") }}
-    </h2>
-    <ul>
-      <li v-for="item in experience" :key="item.id">
-        <h3 class="text-2xl">{{ item.title }}</h3>
-        <p class="font-medium">{{ item.company }}</p>
-        <div class="flex">
-          <p class="flex-1 flex items-center gap-1">
-            <Icon name="lucide:calendar" />
+    </SectionTitle>
+    <ul class="space-y-8">
+      <li v-for="item in experience" :key="item.id" class="break-inside-avoid">
+        <h3 class="text-base font-medium">{{ item.title }}</h3>
+        <p>{{ item.company }}</p>
+        <div class="flex pb-4">
+          <p class="flex-1 flex items-center">
+            <Icon name="lucide:calendar" class="mr-2" />
             {{ format(item.from) }} - {{ format(item.to) }}
           </p>
-          <p class="flex-1 flex items-center gap-1">
-            <Icon name="lucide:map-pin" />
+          <p class="flex-1 flex items-center">
+            <Icon name="lucide:map-pin" class="text-sm mr-2" />
             {{ item.location }}
           </p>
         </div>
-        <ContentRenderer class="prose max-w-none" :value="item" />
+        <ContentRenderer class="" :value="item" />
       </li>
     </ul>
   </div>

@@ -1,2 +1,18 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+@theme inline {
+  --font-mono: "Inconsolata", monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    line-height: var(--text-sm--line-height);
+  }
+}
+
+@page {
+  margin: 0.25in;
+}

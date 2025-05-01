@@ -2,6 +2,18 @@ import { defineCollection, defineContentConfig, z } from "@nuxt/content";
 
 export default defineContentConfig({
   collections: {
+    content_en: defineCollection({
+      type: "data",
+      source: {
+        include: "en/**/*.md",
+        prefix: "/",
+        exclude: ["en/experience/*.md"],
+      },
+      schema: z.object({
+        body: z.any(),
+      }),
+    }),
+
     experience_en: defineCollection({
       type: "data",
       source: {

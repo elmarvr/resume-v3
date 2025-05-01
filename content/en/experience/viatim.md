@@ -1,9 +1,9 @@
 ---
-title: Web Developer
-company: Rain Interactive
-from: 2025-03-01
-to: present
-location: Remote
+title: Medior Full-Stack Developer
+company: Viatim
+from: 2023-10-01
+to: 2024-05-01
+location: Rotterdam, Netherlands
 ---
 
 lorem ipsum dolor sit amet, consectetur adipiscing elit.

@@ -8,9 +8,9 @@ const { data: skills } = await useAsyncData(async () => {
 
 <template>
   <div>
-    <h2 class="text-2xl">
+    <SectionTitle>
       {{ $t("skills") }}
-    </h2>
+    </SectionTitle>
     <ul>
       <li v-for="item in skills" :key="item">
         {{ item }}

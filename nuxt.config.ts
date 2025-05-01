@@ -42,4 +42,13 @@ export default defineNuxtConfig({
   icon: {
     mode: "svg",
   },
+  fonts: {
+    families: [
+      {
+        name: "Inconsolata",
+        provider: "google",
+        weights: [400, 500, 600, 700, 800, 900],
+      },
+    ],
+  },
 });

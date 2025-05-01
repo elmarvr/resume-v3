@@ -6,15 +6,15 @@ const { data: education } = await useAsyncData(async () => {
 
 <template>
   <div>
-    <h2 class="text-2xl">
+    <SectionTitle>
       {{ $t("education") }}
-    </h2>
-    <ul>
+    </SectionTitle>
+    <ul class="space-y-4">
       <li v-for="item in education" :key="item.id">
-        <p>{{ item.title }}</p>
-        <p class="font-medium">{{ item.institution }}</p>
-        <p class="flex items-center gap-1">
-          <Icon name="lucide:calendar" />
+        <p class="font-bold">{{ item.title }}</p>
+        <p>{{ item.institution }}</p>
+        <p class="flex items-center">
+          <Icon name="lucide:calendar" class="mr-2" />
           {{ item.from }} - {{ item.to }}
         </p>
       </li>

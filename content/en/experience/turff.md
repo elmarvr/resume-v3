@@ -1,9 +1,9 @@
 ---
-title: Web Developer
-company: Rain Interactive
-from: 2025-03-01
-to: present
-location: Remote
+title: Lead front-end developer
+company: Turff
+from: 2021-06-01
+to: 2023-03-01
+location: Delft, Netherlands
 ---
 
 lorem ipsum dolor sit amet, consectetur adipiscing elit.
