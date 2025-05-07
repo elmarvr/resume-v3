@@ -4,6 +4,15 @@ company: Rain Interactive
 from: 2025-03-01
 to: present
 location: Remote
+stack:
+  - nuxt
+  - typescript
+  - react
+  - tailwindcss
+  - vue
+  - astro
+  - node
+  - cloudflare
 ---
 
 lorem ipsum dolor sit amet, consectetur adipiscing elit.

@@ -68,7 +68,6 @@ export default defineContentConfig({
         to: z.number(),
       }),
     }),
-
     courses: defineCollection({
       type: "data",
       source: {
@@ -78,6 +77,17 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string(),
         url: z.string(),
+      }),
+    }),
+    stack: defineCollection({
+      type: "data",
+      source: {
+        include: "stack/*.yml",
+        prefix: "/stack",
+      },
+      schema: z.object({
+        title: z.string(),
+        icon: z.string().editor({ input: "icon" }),
       }),
     }),
   },
@@ -97,6 +107,7 @@ function experienceSchema() {
     from: z.date(),
     to: z.date().or(z.literal("present")),
     location: z.string(),
+    stack: z.string().array(),
   });
 }
 

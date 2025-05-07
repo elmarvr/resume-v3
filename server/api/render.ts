@@ -4,7 +4,7 @@ export default eventHandler(async (event) => {
   const { locale } = await getValidatedQuery(
     event,
     z.object({
-      locale: z.enum(["en", "nl"]),
+      locale: z.enum(["en", "nl"]).optional().default("en"),
     }).parse
   );
 

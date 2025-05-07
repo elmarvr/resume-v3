@@ -3,8 +3,8 @@ const app = useAppConfig();
 </script>
 
 <template>
-  <div class="pb-8">
-    <div class="flex justify-between pb-4">
+  <div class="pb-[2em]">
+    <div class="flex justify-between">
       <div>
         <h1 class="text-2xl font-bold">
           {{ app.profile.name }}
@@ -39,15 +39,19 @@ const app = useAppConfig();
       </div>
     </div>
   </div>
-  <div class="grid grid-cols-3 gap-8">
-    <div class="space-y-8">
+
+  <div class="grid grid-cols-3 gap-[2em]">
+    <div class="col-span-3">
+      <Summary />
+    </div>
+
+    <!-- <div class="space-y-8">
       <Education />
       <Courses />
       <Skills />
-    </div>
+    </div> -->
 
-    <div class="col-span-2 space-y-8">
-      <Summary />
+    <div class="col-span-3 space-y-[1em]">
       <Experience />
     </div>
   </div>

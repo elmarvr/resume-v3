@@ -9,7 +9,7 @@ const { data: courses } = await useAsyncData(() => {
     <SectionTitle>
       {{ $t("courses") }}
     </SectionTitle>
-    <ul class="space-y-2">
+    <ul class="space-y-[0.5em]">
       <li
         v-for="item in courses"
         :key="item.url"

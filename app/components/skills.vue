@@ -12,7 +12,7 @@ const { data: skills } = await useAsyncData(async () => {
     <SectionTitle>
       {{ $t("skills") }}
     </SectionTitle>
-    <ul class="space-y-2">
+    <ul class="space-y-[0.5em]">
       <li v-for="item in skills" :key="item">
         {{ item }}
       </li>

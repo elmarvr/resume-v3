@@ -9,7 +9,7 @@ const { data: education } = await useAsyncData(async () => {
     <SectionTitle>
       {{ $t("education") }}
     </SectionTitle>
-    <ul class="space-y-4">
+    <ul class="space-y-[1em]">
       <li v-for="item in education" :key="item.id">
         <p class="font-bold">{{ item.title }}</p>
         <p>{{ item.institution }}</p>
