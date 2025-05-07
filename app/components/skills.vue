@@ -12,8 +12,9 @@ const { data: skills } = await useAsyncData(async () => {
     <SectionTitle>
       {{ $t("skills") }}
     </SectionTitle>
-    <ul class="space-y-[0.5em]">
-      <li v-for="item in skills" :key="item">
+    <ul class="grid grid-cols-4">
+      <li v-for="item in skills" :key="item" class="flex items-center">
+        <Icon name="lucide:check" class="mr-2" />
         {{ item }}
       </li>
     </ul>

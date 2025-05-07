@@ -9,10 +9,13 @@ const { data: education } = await useAsyncData(async () => {
     <SectionTitle>
       {{ $t("education") }}
     </SectionTitle>
-    <ul class="space-y-[1em]">
+    <ul class="flex gap-[2em]">
       <li v-for="item in education" :key="item.id">
-        <p class="font-bold">{{ item.title }}</p>
-        <p>{{ item.institution }}</p>
+        <p>
+          <span class="font-bold">{{ item.title }}</span
+          >, {{ item.institution }}
+        </p>
+
         <p class="flex items-center">
           <Icon name="lucide:calendar" class="mr-2" />
           {{ item.from }} - {{ item.to }}

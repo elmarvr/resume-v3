@@ -102,12 +102,12 @@ function contentSchema() {
 function experienceSchema() {
   return z.object({
     title: z.string(),
-    company: z.string(),
+    company: z.string().optional(),
     body: z.any(),
     from: z.date(),
     to: z.date().or(z.literal("present")),
-    location: z.string(),
-    stack: z.string().array(),
+    location: z.string().optional(),
+    stack: z.string().array().optional(),
   });
 }
 

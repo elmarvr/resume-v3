@@ -40,19 +40,10 @@ const app = useAppConfig();
     </div>
   </div>
 
-  <div class="grid grid-cols-3 gap-[2em]">
-    <div class="col-span-3">
-      <Summary />
-    </div>
-
-    <!-- <div class="space-y-8">
-      <Education />
-      <Courses />
-      <Skills />
-    </div> -->
-
-    <div class="col-span-3 space-y-[1em]">
-      <Experience />
-    </div>
+  <div class="space-y-[2em]">
+    <Summary />
+    <Skills />
+    <Experience />
+    <Education />
   </div>
 </template>

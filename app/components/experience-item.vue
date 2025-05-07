@@ -39,13 +39,13 @@ function format(date: Date | "present") {
 <template>
   <li>
     <h3 class="text-base font-medium">{{ item.title }}</h3>
-    <p>{{ item.company }}</p>
+    <p v-if="item.company">{{ item.company }}</p>
     <div class="flex pb-[1em]">
       <p class="flex-1 flex items-center">
         <Icon name="lucide:calendar" class="mr-2" />
         {{ format(item.from) }} - {{ format(item.to) }}
       </p>
-      <p class="flex-1 flex items-center">
+      <p v-if="item.location" class="flex-1 flex items-center">
         <Icon name="lucide:map-pin" class="text-sm mr-2" />
         {{ item.location }}
       </p>
@@ -53,7 +53,7 @@ function format(date: Date | "present") {
 
     <ContentRenderer :value="item" class="content" />
 
-    <ul class="flex flex-wrap gap-[0.5em] pt-[1em] max-w-lg">
+    <ul v-if="stack" class="flex flex-wrap gap-[0.5em] pt-[1em] max-w-lg">
       <li
         v-for="skill in stack"
         :key="skill.id"
