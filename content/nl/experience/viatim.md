@@ -4,9 +4,15 @@ company: Viatim
 from: 2023-10-01
 to: 2024-05-01
 location: Rotterdam, Nederland
+stack:
+  - angular
+  - typescript
+  - node
+  - expo
+  - mongodb
 ---
 
-lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Donec a diam lectus. Sed sit amet ipsum mauris.
-Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.
-Praesent et diam eget libero egestas faucibus et in enim.
+Ontwikkelde oplossingen voor een netwerk van servicepunten waarmee huishoudens pakketten kunnen ophalen en retourneren.
+
+- Een beheerpaneel gebouwd voor het beheren van servicepunten.
+- Een React Native-app ontwikkeld voor het scannen van pakketten bij in- en uitchecken.

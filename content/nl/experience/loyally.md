@@ -1,15 +1,17 @@
 ---
-title: Junior full-stack developer
+title: Junior Full-Stack Developer
 company: Loyally
 from: 2019-01-01
 to: 2020-02-01
 location: Tilburg, Nederland
+stack:
+  - angular
+  - typescript
+  - node
+  - csharp
+  - css
+  - react
 ---
 
-Focused on building integrations between CRM platforms (AFAS, Zendesk, Salesforce) and telephony systems like Twilio.
-
-Key responsibilities:
-
-- Developed custom scripts to synchronize data across multiple CRM systems.
-- Built dashboards and data overviews to provide actionable insights for clients.
-- Created interactive phone widgets to enable one-click calling from within CRM interfaces.
+- Aangepaste scripts ontwikkeld om gegevens te synchroniseren tussen meerdere CRM-systemen.
+- Interactieve telefoonwidgets gemaakt om met één klik te bellen vanuit CRM-interfaces.
