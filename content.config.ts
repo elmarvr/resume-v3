@@ -15,7 +15,7 @@ export default defineContentConfig({
       type: "data",
       source: {
         include: "nl/**/*.md",
-        prefix: "/",
+        prefix: "/nl",
         exclude: ["nl/experience/*.md"],
       },
       schema: contentSchema(),
@@ -33,7 +33,7 @@ export default defineContentConfig({
       type: "data",
       source: {
         include: "nl/experience/*.md",
-        prefix: "/experience",
+        prefix: "/nl/experience",
       },
       schema: experienceSchema(),
     }),
@@ -41,7 +41,7 @@ export default defineContentConfig({
     skills_en: defineCollection({
       type: "data",
       source: {
-        include: "en/skills.yml",
+        include: "en/skills/*.yml",
         prefix: "/skills",
       },
       schema: skillsSchema(),
@@ -49,8 +49,8 @@ export default defineContentConfig({
     skills_nl: defineCollection({
       type: "data",
       source: {
-        include: "nl/skills.yml",
-        prefix: "/skills",
+        include: "nl/skills/*.yml",
+        prefix: "/nl/skills",
       },
       schema: skillsSchema(),
     }),
@@ -113,6 +113,7 @@ function experienceSchema() {
 
 function skillsSchema() {
   return z.object({
-    skills: z.string().array(),
+    title: z.string(),
+    entries: z.string().array(),
   });
 }

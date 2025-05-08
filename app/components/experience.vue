@@ -18,14 +18,3 @@ const { data: experience } = await useAsyncData(async () => {
     </ul>
   </div>
 </template>
-
-<style>
-.content p + * {
-  margin-top: 1em;
-}
-
-.content ul {
-  list-style-type: disc;
-  list-style-position: inside;
-}
-</style>

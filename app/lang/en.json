@@ -4,5 +4,7 @@
   "experience": "Experience",
   "courses": "Courses",
   "skills": "Skills",
-  "summary": "Career Summary"
+  "summary": "Career Summary",
+  "soft": "Soft",
+  "technical": "Technical"
 }

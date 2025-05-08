@@ -53,7 +53,10 @@ function format(date: Date | "present") {
 
     <ContentRenderer :value="item" class="content" />
 
-    <ul v-if="stack" class="flex flex-wrap gap-[0.5em] pt-[1em] max-w-lg">
+    <ul
+      v-if="stack?.length"
+      class="flex flex-wrap gap-[0.5em] pt-[1em] max-w-lg"
+    >
       <li
         v-for="skill in stack"
         :key="skill.id"
@@ -65,3 +68,14 @@ function format(date: Date | "present") {
     </ul>
   </li>
 </template>
+
+<style>
+.content p + * {
+  margin-top: 1em;
+}
+
+.content ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+</style>
