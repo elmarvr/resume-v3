@@ -13,5 +13,5 @@ stack:
   - react
 ---
 
-- Aangepaste scripts ontwikkeld om gegevens te synchroniseren tussen meerdere CRM-systemen.
+- Scripts ontwikkeld om gegevens te synchroniseren tussen meerdere CRM-systemen zoals **Salesforce** en **ZenDesk**.
 - Interactieve telefoonwidgets gemaakt om met één klik te bellen vanuit CRM-interfaces.

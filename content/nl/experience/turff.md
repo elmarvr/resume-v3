@@ -11,14 +11,12 @@ stack:
   - tailwindcss
   - node
   - vue
-  - nuxt
   - sass
 ---
 
-Gebouwd en onderhouden aan Turff's digitale platform voor het bijhouden van gedeelde aankopen en het bestellen van leveringen in studentenhuizen.
+Gewerkt aan Turff's digitale platform voor het bijhouden van gedeelde aankopen en het bestellen van leveringen in studentenhuizen.
 
-- Het dashboard opnieuw opgebouwd in Vue 3 + TypeScript, inclusief een volledige herontwerp.
-- Een aangepaste UI-bibliotheek gemaakt met meer dan 50 herbruikbare componenten.
+- Het nieuwe dashboard gedesigned en gerefactoreerd van Vue 2 naar Vue 3 en TypeScript.
+- Een UI library gemaakt met 50+ herbruikbare componenten.
 - Een Next.js-webshop gebouwd voor de bezorgservice in minder dan een maand.
-- Complexe TypeScript-uitdagingen opgelost in de hele stack.
-- Bijgedragen aan backend-functies en UI/UX ontworpen voor alle belangrijke interfaces.
+- Bijgedragen aan de backend en verantwoordelijk voor het UI/UX ontwerp van alle interfaces

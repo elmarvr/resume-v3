@@ -14,5 +14,5 @@ stack:
 
 Ontwikkelde oplossingen voor een netwerk van servicepunten waarmee huishoudens pakketten kunnen ophalen en retourneren.
 
-- Een beheerpaneel gebouwd voor het beheren van servicepunten.
+- Een dashboard gebouwd voor het beheren van servicepunten.
 - Een React Native-app ontwikkeld voor het scannen van pakketten bij in- en uitchecken.

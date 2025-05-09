@@ -1,1 +1,2 @@
-Front-end developer with a sharp eye for UX and a love for clean, accessible code. Skilled at turning complex problems into simple, scalable solutions. Constantly learning, building, and improving.
+Gepassioneerd in het creëren van leesbare, schaalbare code met een sterke focus op gebruikerservaring. Vaardig in het omzetten van complexe problemen naar eenvoudige, intuïtieve oplossingen.
+Continu bezig met het verbeteren van mijn vaardigheden en kennis, en gemotiveerd om nieuwe uitdagingen aan te gaan en verder te groeien.

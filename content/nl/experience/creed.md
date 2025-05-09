@@ -15,6 +15,6 @@ stack:
 Een CRM-platform voor het beheren van marketingcampagnes, met tools om prestaties bij te houden en contentmakers te koppelen aan merken.
 
 - Een schaalbare Next.js front-end architectuur gebouwd.
-- Een zelfstandige React UI-bibliotheek ontwikkeld op basis van het design systeem van Creed Media.
-- De front-end geïntegreerd met een GraphQL-backend voor dynamische gegevensopvraging.
-- Junior ontwikkelaars begeleid en gecoacht om hoogwaardige code en een soepel projectverloop te garanderen.
+- Een React UI-bibliotheek ontwikkeld op basis van het design systeem van Creed Media.
+- Een GraphQL-interface opgezet voor directe communicatie tussen front-end en backend.
+- Junior ontwikkelaars begeleid en gecoacht om zelfstandig te kunnen bijdragen aan complexe projecten.
