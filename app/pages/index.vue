@@ -1,5 +1,9 @@
 <script setup lang="ts">
 const app = useAppConfig();
+const { locale } = useI18n();
+const country = computed(() =>
+  new Intl.DisplayNames([locale.value], { type: "region" }).of("NL")
+);
 </script>
 
 <template>
@@ -9,9 +13,7 @@ const app = useAppConfig();
         <h1 class="text-2xl font-bold">
           {{ app.profile.name }}
         </h1>
-        <p>
-          {{ app.profile.address }}
-        </p>
+        <p>{{ app.profile.city }}, {{ country }}</p>
       </div>
 
       <div class="flex flex-col">
@@ -45,5 +47,6 @@ const app = useAppConfig();
     <Skills />
     <Experience />
     <Education />
+    <Courses />
   </div>
 </template>

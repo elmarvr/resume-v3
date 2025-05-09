@@ -37,9 +37,13 @@ function format(date: Date | "present") {
 </script>
 
 <template>
-  <li>
-    <h3 class="text-base font-medium">{{ item.title }}</h3>
-    <p v-if="item.company">{{ item.company }}</p>
+  <li class="break-inside-avoid">
+    <div class="flex items-center">
+      <p class="text-base font-medium">{{ item.title }}</p>
+
+      <span v-if="item.company" class="text-xs mx-3"> &#9679; </span>
+      <p v-if="item.company">{{ item.company }}</p>
+    </div>
     <div class="flex pb-[1em]">
       <p class="flex-1 flex items-center">
         <Icon name="lucide:calendar" class="mr-2" />
